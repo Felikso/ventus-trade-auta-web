@@ -56,7 +56,7 @@ export const AdressSection = styled.section`
 export const AdressBox = styled.div`
   line-height: 0.5em;
   h3{
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primaryLight};
     font-size: 20px;
   }
 
@@ -169,7 +169,7 @@ export const ContactSectionsBox = styled.div`
   h5{
     text-decoration: none;
     text-transform: uppercase;
-    color: ${({ theme }) => theme.colors.primary};
+    color: ${({ theme }) => theme.colors.primaryLight};
     font-size: 20px;
     position: relative;
   }

@@ -34,6 +34,6 @@ export const ContactIconInfo = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background: ${({ theme }) => theme.colors.primary}; 
+    background: ${({ theme }) => theme.colors.primaryLight}; 
     color:  ${({ theme }) => theme.colors.third};
 `

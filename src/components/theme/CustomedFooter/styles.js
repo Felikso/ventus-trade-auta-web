@@ -7,7 +7,7 @@ import { ReactComponent as Logo } from "assets/svgs/vt-logo.svg";
 export const FooterHeader = styled.section`
   height: 30px;
   background: ${({ theme }) => theme.colors.third};
-  border-bottom: 2px solid ${({ theme }) => theme.colors.primary};
+  border-bottom: 2px solid ${({ theme }) => theme.colors.primaryLight};
 
   /*   filter: brightness(65%); */
 `
@@ -42,7 +42,7 @@ align-items: center;
 padding: 0.3em 0;
 width: 95%;
 margin: auto;
-border-top: 2px solid ${({ theme }) => theme.colors.primary};
+border-top: 2px solid ${({ theme }) => theme.colors.primaryLight};
 
 @media (min-width: ${({ theme }) => theme.device.m}){
   flex-direction: row;
@@ -101,12 +101,12 @@ margin: 10px;
 display: flex;
 padding: 10px;
 border-radius: 50px;
-background: ${({ theme }) => theme.colors.primary};
+background: ${({ theme }) => theme.colors.primaryLight};
 transition: 0.3s ease-in;
 color: ${({ theme }) => theme.colors.third};
 
 &:hover{
-  color: ${({ theme }) => theme.colors.primary};
+  color: ${({ theme }) => theme.colors.primaryLight};
   -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	transform: scale(1.5);
@@ -116,10 +116,10 @@ color: ${({ theme }) => theme.colors.third};
 `
 
 export const FooterLink = styled(Link)`
-  color: ${({ theme }) => theme.colors.primary}; 
+  color: ${({ theme }) => theme.colors.primaryLight}; 
   text-decoration: none;
   margin: 0 10px;
-  transition: ${({ theme }) => theme.transitions.primary}; 
+  transition: ${({ theme }) => theme.transitions.primaryLight}; 
   padding: 10px 0;
   display: flex;
   grid-gap: 10px;
@@ -130,11 +130,11 @@ export const FooterLink = styled(Link)`
 `
 
 export const FooterInfo = styled(Link)`
-color: ${({ theme }) => theme.colors.primary}; 
+color: ${({ theme }) => theme.colors.primaryLight}; 
 font-size: ${({ theme }) => theme.fontSize.xs}; 
 text-decoration: none;
 margin: .3em;
-transition: ${({ theme }) => theme.transitions.primary}; 
+transition: ${({ theme }) => theme.transitions.primaryLight}; 
 &:hover{
   color: ${({ theme }) => theme.colors.secondary};
   /* filter: brightness(0.6); */
@@ -142,7 +142,7 @@ transition: ${({ theme }) => theme.transitions.primary};
 
 &::before {
   content: "|   ";
-  color: ${({ theme }) => theme.colors.primary}; 
+  color: ${({ theme }) => theme.colors.primaryLight}; 
 }
 
 @media (min-width: ${({ theme }) => theme.device.m}){

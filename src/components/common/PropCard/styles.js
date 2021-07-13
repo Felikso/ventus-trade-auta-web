@@ -158,7 +158,7 @@ export const PropCardInfo = styled.div`
             width: 100%;
             height: 25%;
             font-size: 8px;
-            background: ${theme.colors.primary}; 
+            background: ${theme.colors.primaryLight}; 
             color:  ${theme.colors.third};
 
             @media (min-width: ${theme.device.s}) {
@@ -186,6 +186,10 @@ export const PropCardInfo = styled.div`
                     }
                     @media (min-width: ${theme.device.xxl}) {
                       font-size: clamp(1.125rem, 2vmax, 1.5rem);
+                    }
+
+                    em {
+                      color: red;
                     }
                     `}
 

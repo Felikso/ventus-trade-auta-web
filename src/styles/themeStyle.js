@@ -30,6 +30,7 @@ export const themeStyleDark = {
 
     colors: {
         primary: "#1409a0", /* blue */
+        primaryLight: "#8C98FF",
         secondary: "#D4D4D4", /* light */
         secondaryLight: "#d4d4d01f", /* light */
         third: "#000", /* dark */
@@ -340,7 +341,8 @@ export const themeStyleLight = {
         }
     },
     colors: {
-        primary: "#1409a0", /* blue */
+        primary: "#8C98FF", /* blue */
+        primaryLight: "#1409a0",
         secondary: "#000", /* dark */
         secondaryLight: "#00000075", /* light */
         third: "#D4D4D4", /* dark */

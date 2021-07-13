@@ -97,16 +97,25 @@ export const GridContentBox = styled(ContentBox)`
     display: grid;
     grid-template-columns: 1fr;
 
+    span{
+      font-weight: bold;
+      color: ${({ theme }) => theme.colors.primary};
+    }
+
     p{
       display: grid;
       grid-template-columns: 1fr 1fr;
 
-      ${({ secondary }) =>
+
+
+      ${({ secondary, theme }) =>
     secondary &&
     `
+
       grid-template-columns: 1fr;
       position: relative;
       text-transform: uppercase;
+
 
       &:after{
         content: "✓";
@@ -117,6 +126,11 @@ export const GridContentBox = styled(ContentBox)`
         right: 0;
       }
 
+      span{
+        font-weight: bold;
+        color: ${theme.colors.primaryLight};
+      }
+
     `}
 
     }
@@ -125,10 +139,7 @@ export const GridContentBox = styled(ContentBox)`
       list-style: none;
     }
 
-    span{
-      font-weight: bold;
-      color: ${({ theme }) => theme.colors.primary}
-    }
+
 `
 
 export const ParametersBox = styled(ContentBox)`

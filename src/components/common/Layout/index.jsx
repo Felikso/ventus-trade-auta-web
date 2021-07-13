@@ -3,10 +3,10 @@ import { ThemeProvider as ThemeProviderStyle } from "styled-components";
 import { themeStyleLight as theme } from "styles";
 import { themeStyleDark as themeDark } from "styles";
 import { ThemeContext } from 'providers/ThemeProvider';
-import { Footer, CustomedFooter } from 'components/theme';
+import { CustomedFooter } from 'components/theme';
 import { Global } from './styles';
 import { CustomedNav } from 'components/theme/CustomedNav';
-import { links } from "constans/nav-items"
+import { links, contactNav } from "constans"
 import { ScrollBtn } from "interactions"
 import { BottomNav } from "components/common"
 import './fonts.css';
@@ -21,7 +21,7 @@ export const Layout = ({ children, alternativeLinks }) => {
         <CustomedNav links={alternativeLinks ? alternativeLinks : links} />
         <ScrollBtn showBelow={250} />
         {children}
-        <BottomNav />
+        <BottomNav contactData={contactNav} />
         <CustomedFooter />
       </ThemeProviderStyle>
     </>

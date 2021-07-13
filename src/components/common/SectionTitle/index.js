@@ -77,7 +77,7 @@ h4{
   background: transparent;
   text-align: right; 
   h4{
-    color: ${theme.colors.primary};
+    color: ${theme.colors.primaryLight};
 
 
     &::after {
@@ -95,7 +95,7 @@ padding: 0;
 width: auto;
 
 h4{
-  color: ${theme.colors.primary};
+  color: ${theme.colors.primaryLight};
 
 
   &::after {
