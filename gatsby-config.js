@@ -98,7 +98,7 @@ module.exports = {
 			},
 		},
 		`gatsby-transformer-sharp`,
-		/* 		`gatsby-plugin-sitemap`, */
+		`gatsby-plugin-sitemap`,
 		`gatsby-transformer-json`,
 		`gatsby-plugin-sharp`,
 		{
