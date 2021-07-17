@@ -30,7 +30,7 @@ module.exports = {
 			resolve: `gatsby-plugin-yandex-metrika`,
 			options: {
 				// The ID of yandex metrika.
-				trackingId: 12345,
+				trackingId: process.env.YANDEX_METRICA_TRACKING_ID,
 				// Enabled a webvisor. The default value is `false`.
 				webvisor: true,
 				// Enables tracking a hash in URL. The default value is `false`.
@@ -40,7 +40,7 @@ module.exports = {
 				afterBody: true,
 				// Use `defer` attribute of metrika script. If set to `false` - script will be loaded with `async` attribute.
 				// Async enables earlier loading of the metrika but it can negatively affect page loading speed. The default value is `false`.
-				defer: false,
+				defer: true,
 			},
 		},
 		/* {
