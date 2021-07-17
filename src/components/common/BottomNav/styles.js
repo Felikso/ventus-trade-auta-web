@@ -4,14 +4,7 @@ export const ButtonsBox = styled.div`
   display: flex;
   width: 100%;
   justify-content: space-around;
-/*   height: 10vh;
 
-  button {
-    font-size: 10px;
-    padding: unset;
-    padding: 10px 30px;
-  }
- */
   @media (min-width: ${({ theme }) => theme.device.m}) {
     width: auto;
     margin-right: 20px;
@@ -40,7 +33,6 @@ export const StyledBottomNav = styled.div`
   left: 0;
   width: 100vw;
   margin: 0 auto;
-/*   height: 5vh; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -50,7 +42,6 @@ export const StyledBottomNav = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-/*   padding: 5px 0; */
   z-index: 1000;
 
 

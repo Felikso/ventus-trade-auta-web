@@ -101,7 +101,6 @@ const MenuBar = styled.header`
 @media (min-width: ${({ theme }) => theme.device.l}) {
     display: none;
   }
-/*   height: 3rem; */
   position: fixed;
   width: 100%;
   transition: background 300ms;
@@ -144,7 +143,7 @@ const MenuIcon = styled.button`
   div {
     width: 2rem;
     height: 0.25rem;
-    background: ${({ menuOpen, theme }) => (menuOpen ? theme.colors.burgerOpen : theme.colors.burgerClose)};
+    background: ${({ menuOpen, theme }) => (menuOpen ? theme.colors.secondary : theme.colors.third)};
     border-radius: 10px;
     transform-origin: 1px;
     transition: opacity 300ms, transform 300ms;
@@ -172,7 +171,7 @@ const MenuLinks = styled.nav`
   justify-content: center;
   align-items: center;
   display: flex;
-  background: ${({ theme }) => theme.colors.openedNavBg};
+  background: ${({ theme }) => theme.colors.third};
   position: absolute;
   z-index: 5;
   top: 0;
@@ -202,15 +201,15 @@ const MenuLinks = styled.nav`
         display: block;
         text-decoration: none;
         padding: 0.5rem 1rem 0.5rem 1rem;
-        color: ${({ theme }) => theme.colors.mobileNavLinks};
+        color: ${({ theme }) => theme.colors.primary};
         font-weight: 700;
         text-transform: capitalize;
         cursor: pointer;
-        transition: all 0.5s ease-in-out;
+        transition: ${({ theme }) => theme.transitions.primary};
     
         &:hover {
-          background: ${({ theme }) => theme.colors.mobileNavBg};
-          color: ${({ theme }) => theme.colors.mobileNavLinksHover};
+          background: ${({ theme }) => theme.colors.secondaryLight};
+          color: ${({ theme }) => theme.colors.primaryLight};
           padding: 0.5rem 1rem 0.5rem 1.3rem;
         }
       }

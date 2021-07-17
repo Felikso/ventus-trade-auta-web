@@ -1,14 +1,12 @@
 import React from 'react';
 
 import { Wrapper, GridWrapper, AboutIconsBox, FeaturesBox } from './styles';
-import { SectionTitle, PropCard } from 'components/common'
+import { SectionTitle, PropCard, ContentBox } from 'components/common'
 
 import { ReactComponent as ValueIcon } from 'assets/icons/ventus-trade-wartosc.svg'
 import { ReactComponent as DivIcon } from 'assets/icons/ventus-trade-dywersyfikacja.svg'
 import { ReactComponent as InnoIcon } from 'assets/icons/ventus-trade-innowacja.svg'
 
-
-import { Hr, ContentBox } from 'components/common'
 
 
 export const About = () => {

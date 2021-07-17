@@ -9,11 +9,10 @@ import { ReactComponent as VatIcon } from 'assets/product-props/vat.svg'
 import { ReactComponent as PetrolIcon } from 'assets/product-props/petrol.svg'
 import { ReactComponent as RoadIcon } from 'assets/product-props/road.svg'
 
-import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import { getImage } from 'gatsby-plugin-image'
 
 import { Button, PropCard } from "components/common"
 
-/* import { Button } from 'components/common' */
 export const ProductCard = ({ children, bgImage, product, i }) => {
     const { themeMode } = useContext(ThemeContext);
     const even = i % 2 == 0

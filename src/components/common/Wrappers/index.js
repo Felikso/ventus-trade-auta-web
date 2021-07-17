@@ -1,5 +1,14 @@
 import styled from 'styled-components'
 
+export const PaddingWrapper = styled.section`
+    padding: 1rem;
+
+    @media (min-width: ${({ theme }) => theme.device.m}) {
+      padding: 1rem 2rem;
+      
+    }
+`
+
 export const DefaultWrapper = styled.div`
   border: solid 1rem ${({ theme }) => theme.colors.primary};
 

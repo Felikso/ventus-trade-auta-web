@@ -6,12 +6,12 @@ import { SectionTitle } from 'components/common'
 
 import { getImage } from 'gatsby-plugin-image'
 import { ProductCard } from 'components/product'
-import { Hr } from 'components/common'
+
 
 
 export const Offer = () => {
 
-    const { img, productData } = useStaticQuery(
+    const { productData } = useStaticQuery(
         graphql`
     query {
     
@@ -59,7 +59,6 @@ export const Offer = () => {
 
                 <ProductsWrapper secondary>
                     {productData.nodes.map((product, i) => {
-                        const mainImage = getImage(product.mainImage.childImageSharp.gatsbyImageData);
                         return (
                             <>
                                 <ProductCard key={i} product={product} bgImage={product.mainImage.childImageSharp.gatsbyImageData} i={i} />

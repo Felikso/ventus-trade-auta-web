@@ -1,13 +1,10 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import { Layout, Seo, PropCard, CustomedHeader, Button, SectionTitle, HeroHeader } from "components/common";
+import { Layout } from "components/theme"
+import { Seo, PropCard, Button, SectionTitle, HeroHeader } from "components/common";
 import { getImage } from 'gatsby-plugin-image'
 
-import { ProductPhotosBox, ProductModalGallery } from "components/product"
-
-import { ProductDetailsWrapper, VinBox, ParametersBox, GridContentBox, GridBox, GridBoxDetails, GridInfoBox, ModalContainer, ModalInfoBox, ModalGalleryBox } from './styles.js'
-
-
+import { ProductModalGallery, VinBox, ParametersBox, GridContentBox, GridBoxDetails, GridInfoBox, ModalContainer, ModalInfoBox, ModalGalleryBox } from "components/product"
 
 import { alternativeLinks } from "constans/nav-items"
 
@@ -104,15 +101,11 @@ const ProductPage = ({ data, key }) => {
       caption: `Ventus Trade`,
       underCaptionName: item.name,
       underCaptionSize: item.size,
-      fontColorName: 'green',
 
     })
   })
 
   const photos = productData.photos
-
-  console.log(photos)
-
   return (
     <Layout alternativeLinks={alternativeLinks}>
       <Seo />
@@ -190,7 +183,6 @@ const ProductPage = ({ data, key }) => {
             }
           </GridBoxDetails>
 
-
           <GridInfoBox>
             <GridContentBox >
               <SectionTitle fifth><h4>Informacje</h4></SectionTitle>
@@ -223,118 +215,8 @@ const ProductPage = ({ data, key }) => {
         </ModalInfoBox>
 
       </ModalContainer>
-
-      {/*   <ProductDetailsWrapper>
-
-
-        <GridBox>
-          <div>
-            <h1>{productData.name}</h1>
-            <ProductPhotosBox images={images} mainImage={mainImage} />
-          </div>
-          <GridBoxDetails>
-
-            <ParametersBox >
-              <SectionTitle fifth ><h4>Parametry</h4></SectionTitle>
-              <PropCard content={productData.price + " pln"}>
-                <PriceIcon />
-              </PropCard>
-
-              <PropCard content={productData.invoice ? "tak" : "nie"}>
-                <VatIcon />
-              </PropCard>
-
-              <PropCard content={productData.petrol}>
-                <PetrolIcon />
-              </PropCard>
-
-              <PropCard content={productData.rgb ? productData.course + " rbg" : productData.course + " km"}>
-                <RoadIcon />
-              </PropCard>
-
-              <PropCard content={productData.power + " km"}>
-                <HorseIcon />
-              </PropCard>
-
-              <PropCard content={productData.capacity + " cm3"}>
-                <EngineIcon />
-              </PropCard>
-
-              <PropCard content={productData.gearbox === 'manual' ? 'manual' : 'automat'}>
-                {productData.gearbox === 'manual' ? <ManualIcon /> : <AutomatIcon />}
-              </PropCard>
-
-            </ParametersBox>
-
-            <ParametersBox >
-              <SectionTitle fifth><h4>Opis</h4></SectionTitle>
-              <p>{productData.description}</p>
-            </ParametersBox>
-            {
-              productData.vin !== "" && (
-                <>
-                  <VinBox>
-                    <SectionTitle six><h4>VIN</h4></SectionTitle>
-                    <span>{productData.vin}</span>
-                  </VinBox>
-                </>
-              )
-            }
-          </GridBoxDetails>
-
-        </GridBox>
-
-        <GridInfoBox>
-          <GridContentBox >
-            <SectionTitle fifth><h4>Informacje</h4></SectionTitle>
-            <p><span>Marka:</span>{productData.brand}</p>
-            <p><span>Model:</span>{productData.model}</p>
-            <p><span>Rok:</span>{productData.year}</p>
-            {productData.grossPrice && (<p><span>Cena brutto:</span>{productData.grossPrice}</p>)}
-            {productData.price && (<p><span>Cena netto:</span>{productData.price}</p>)}
-            {productData.generation && (<p><span>Generacja:</span>{productData.generation}</p>)}
-            {productData.drive && (<p><span>Napęd:</span>{productData.drive}</p>)}
-
-
-            {productData.imported && (<p><span>Importowany</span></p>)}
-            {productData.loanable && (<p><span>Możliwość wynajmu</span></p>)}
-          </GridContentBox>
-
-
-
-
-          <GridContentBox >
-            <SectionTitle fifth><h4>Wyposażenie</h4></SectionTitle>
-            {productData.extras.map((item, i) => (
-              <li i={i}>✓ {item}</li>
-            ))}
-
-          </GridContentBox>
-        </GridInfoBox>
-
-      </ProductDetailsWrapper> */}
     </Layout>
   )
 }
 
 export default ProductPage
-
-/* const OfferItemsBox = styled.section`
-  background: ${({ theme }) => theme.colors.offerItemsBoxBg};
-  padding: 10px 20px;
-
-  h3{
-    color: ${({ theme }) => theme.colors.offerItemsBoxH3};
-    font-size: ${({ theme }) => theme.colors.offerItemsBoxH3FS};
-  }
-
-  h6{
-    color: ${({ theme }) => theme.colors.offerItemsBoxH6};
-    font-size: ${({ theme }) => theme.colors.offerItemsBoxH6FS};
-  }
-
-  h2{
-    font-size: ${({ theme }) => theme.colors.offerItemsBoxH6FS};
-  }
-`
- */

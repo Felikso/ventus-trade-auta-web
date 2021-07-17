@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import detailsIllustration from 'assets/illustrations/details.svg';
 import { ContentBox, DefaultWrapper, MainWrapper } from 'components/common'
 import { ReactComponent as Map } from 'assets/illustrations/ventus-trade-location.svg'
 import { ReactComponent as Logo } from 'assets/illustrations/vt-logo.svg'
@@ -93,17 +92,6 @@ margin: auto;
 } 
 `;
 
-export const Wrapper = styled.section`
-display: flex;
-flex-direction: column;
-background-color: ${({ theme }) => theme.colors.secondary};  
-
-@media (min-width: ${({ theme }) => theme.device.xl}) {
-  order: -1;
-
-}
-`;
-
 
 /* Contact */
 
@@ -140,10 +128,6 @@ export const ContactSectionWrapper = styled.section`
   display: grid;
   grid-template-columns: 1fr;
   height: 100%;
-
-/*   @media (min-width: ${({ theme }) => theme.device.m}) {
-    grid-template-columns: 1.3fr 1fr;
-  } */
 
 `
 export const ToggleableBg = styled(Logo)`

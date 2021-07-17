@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import detailsIllustration from 'assets/illustrations/details.svg';
 import { ContentBox } from 'components/common'
 import { ReactComponent as Map } from 'assets/illustrations/ventus-trade-location.svg'
 

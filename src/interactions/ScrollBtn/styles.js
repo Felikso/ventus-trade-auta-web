@@ -26,7 +26,7 @@ export const ScrollButton = styled.button`
             transition: 0.8s;
             animation: ${ShowScroll} .5s ease-in-out normal forwards;
             animation-iteration-count: 1;
-            transition: all .2s ease-in-out;
+            transition: ${({ theme }) => theme.transitions.primary};
 
         &:hover {
             transition: 0.5s;

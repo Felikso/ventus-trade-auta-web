@@ -15,7 +15,6 @@ export const ProductModalGallery = ({ photos }) => {
 
     const handlePrev = () => {
         if (photo <= 0) {
-            console.log("jest mniejsze niż 0!")
         } else {
             setPhoto(currPhoto => currPhoto - 1)
 
@@ -24,7 +23,6 @@ export const ProductModalGallery = ({ photos }) => {
 
     const handleNext = () => {
         if (photo === (galleryLength - 1)) {
-            console.log("to już wszystkie zdjęcia!")
         } else {
             setPhoto(currPhoto => currPhoto + 1)
 
@@ -37,7 +35,6 @@ export const ProductModalGallery = ({ photos }) => {
         if (keyCode === 37) {
             // Left Arrow Key
             if (photo <= 0) {
-                console.log("jest mniejsze niż 0!")
             } else {
                 setPhoto(currPhoto => currPhoto - 1)
 
@@ -46,7 +43,6 @@ export const ProductModalGallery = ({ photos }) => {
         if (keyCode === 39) {
             // Right Arrow Key
             if (photo === (galleryLength - 1)) {
-                console.log("to już wszystkie zdjęcia!")
             } else {
                 setPhoto(currPhoto => currPhoto + 1)
             }
@@ -61,7 +57,6 @@ export const ProductModalGallery = ({ photos }) => {
     })
 
     useEffect(() => {
-        console.log(photo)
     }, [photo])
 
 
@@ -70,8 +65,6 @@ export const ProductModalGallery = ({ photos }) => {
     const handleTouchStart = (e) => {
         const touchDown = e.touches[0].clientX
         setTouchPosition(touchDown)
-        console.log(touchDown)
-        console.log('touchDown')
     }
 
     const handleTouchMove = (e) => {

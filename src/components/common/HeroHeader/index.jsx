@@ -21,6 +21,7 @@ export function HeroHeader({
                 <h2>{HeroBrandName}</h2>
                 <h4>{HeroSubName}</h4>
             </HeroHeaderText>
+            {children}
 
         </HeroHeaderBox>
     )

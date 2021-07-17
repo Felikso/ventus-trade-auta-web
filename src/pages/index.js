@@ -1,7 +1,8 @@
 import React from "react";
 import { graphql, useStaticQuery } from "gatsby"
-import { Layout, Seo, HeroHeader, CustomedGridBox, SeparateBox } from "components/common";
-import { Contact, Offer, Location, About, ContactLocation } from "components/landing";
+import { Layout } from "components/theme"
+import { Seo, HeroHeader, SeparateBox } from "components/common";
+import { Offer, About, ContactLocation } from "components/landing";
 
 import { getImage } from "gatsby-plugin-image"
 
@@ -25,7 +26,7 @@ const Home = () => {
 
 	return (
 		<Layout>
-			<Seo />
+			<Seo title="Ventus Trade Auta" location="/" />
 			<HeroHeader
 				small
 				bgImage={backgroundImage}
@@ -42,10 +43,6 @@ const Home = () => {
 			<SeparateBox />
 			<Offer />
 			<ContactLocation />
-			{/* 			<CustomedGridBox>
-				<Contact />
-				<Location />
-			</CustomedGridBox> */}
 			<About />
 
 		</Layout>

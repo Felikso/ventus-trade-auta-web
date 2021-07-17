@@ -4,7 +4,7 @@ import DesktopNavMenu from "./DesktopNav"
 import MobileNavMenu from "./MobileNav"
 
 
-export const CustomedNav = ({ siteTitle, links }) => {
+export const CustomedNav = ({ /* siteTitle,  */links }) => {
 
   return (
     <>

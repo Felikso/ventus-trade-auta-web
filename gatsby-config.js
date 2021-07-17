@@ -2,7 +2,12 @@ const config = require("./src/data/config");
 
 require("dotenv").config({
 	path: `.env`,
-});
+})
+
+// require .env.development or .env.production
+require("dotenv").config({
+	path: `.env.${process.env.NODE_ENV}`,
+})
 
 module.exports = {
 	siteMetadata: {
@@ -10,6 +15,7 @@ module.exports = {
 		description: config.defaultDescription,
 		author: config.author,
 		locationAdressRoute: config.locationAdressRoute,
+		siteUrl: process.env.SITE_URL,
 	},
 	plugins: [
 		"gatsby-plugin-react-helmet",
@@ -17,9 +23,53 @@ module.exports = {
 		{
 			resolve: `gatsby-plugin-canonical-urls`,
 			options: {
-				siteUrl: config.url,
+				siteUrl: process.env.SITE_URL,
 			},
 		},
+		{
+			resolve: `gatsby-plugin-yandex-metrica`,
+			options: {
+				trackingId: process.env.YANDEX_METRICA_TRACKING_IDL,
+				clickmap: true,
+				trackLinks: true,
+				accurateTrackBounce: true,
+				trackHash: true,
+
+				// Detailed recordings of user activity on the site: mouse movement, scrolling, and clicks.
+				webvisor: true,
+			}
+		},
+		/* {
+			resolve: `gatsby-plugin-sitemap`,
+			options: {
+				query: `{
+				site {
+					siteMetadata {
+					  siteUrl
+					}
+				  }
+				  allSitePage {
+					edges {
+					  node {
+						path
+					  }
+					}
+				  }
+			  }`,
+				serialize: ({ site, allSitePage }) => {
+					let pages = []
+					allSitePage.edges.map(edge => {
+						pages.push({
+							url: site.siteMetadata.siteUrl + edge.node.path,
+							changefreq: `daily`,
+							priority: 0.7,
+						})
+					})
+					return pages
+				},
+			},
+		}, */
+
 		/* 		{
 					resolve: "gatsby-source-graphql",
 					options: {
@@ -39,13 +89,6 @@ module.exports = {
 				showSpinner: false,
 			},
 		},
-		/* 		{
-					resolve: "gatsby-plugin-google-analytics",
-					options: {
-						trackingId: config.googleAnalyticsID,
-						head: true,
-					},
-				}, */
 		{
 			resolve: "gatsby-plugin-manifest",
 			options: {
@@ -60,22 +103,6 @@ module.exports = {
 		},
 		`gatsby-transformer-remark`,
 		`gatsby-plugin-image`,
-		/* 		{
-					resolve: `gatsby-plugin-scroll-reveal`,
-					options: {
-						threshold: 0.5, // Percentage of an element's area that needs to be visible to launch animation
-						once: true, // Defines if animation needs to be launched once
-						disable: false, // Flag for disabling animations
-		
-						// Advanced Options
-						selector: '[data-sal]', // Selector of the elements to be animated
-						animateClassName: 'sal-animate', // Class name which triggers animation
-						disabledClassName: 'sal-disabled', // Class name which defines the disabled state
-						rootMargin: '0% 50%', // Corresponds to root's bounding box margin
-						enterEventName: 'sal:in', // Enter event name
-						exitEventName: 'sal:out', // Exit event name
-					}
-				}, */
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -83,13 +110,6 @@ module.exports = {
 				path: `${__dirname}/src/images`,
 			},
 		},
-		/* 		{
-					resolve: `gatsby-source-filesystem`,
-					options: {
-						name: `cars`,
-						path: `./data/`,
-					},
-				}, */
 		{
 			resolve: `gatsby-source-filesystem`,
 			options: {
@@ -98,8 +118,8 @@ module.exports = {
 			},
 		},
 		`gatsby-transformer-sharp`,
-		`gatsby-plugin-sitemap`,
 		`gatsby-transformer-json`,
+		'gatsby-plugin-sitemap',
 		`gatsby-plugin-sharp`,
 		{
 			resolve: `gatsby-plugin-manifest`,
@@ -113,7 +133,6 @@ module.exports = {
 				icon: `src/images/ventus-trade-logo.png`, // This path is relative to the root of the site.
 			},
 		},
-		`gatsby-plugin-gatsby-cloud`,
 		'gatsby-plugin-svgr',
 		{
 			resolve: "gatsby-plugin-anchor-links",
@@ -180,12 +199,9 @@ module.exports = {
 				output: `/sitemap.xml`,
 			  }
 			}, */
-		/* 		'gatsby-plugin-robots-txt', */
+		'gatsby-plugin-robots-txt',
 		`gatsby-plugin-polyfill-io`,
 		`gatsby-plugin-preact`,
-		// this (optional) plugin enables Progressive Web App + Offline functionality
-		// To learn more, visit: https://gatsby.dev/offline
-		// `gatsby-plugin-offline`,
 		{
 			resolve: "gatsby-plugin-webpack-bundle-analyser-v2",
 			options: {

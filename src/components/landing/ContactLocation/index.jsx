@@ -1,8 +1,7 @@
 import React from 'react';
 import { GridMainWrapper, ReverseBox, LocationContainer, MapLocation, AdressSection, AdressBox, LocationContentBox, ContactIconsBox, ToggleableBg, GridContactInfo, ContactSectionsBox, ContactSectionWrapper, ReverseWrapper } from './styles';
-import { SectionTitle, DefaultWrapper, MainWrapper, PropCard } from 'components/common'
+import { SectionTitle, DefaultWrapper, PropCard } from 'components/common'
 
-/* import ContactForm from './ContactForm'; */
 
 import { contactItems } from "constans"
 

@@ -1,4 +1,3 @@
-
-export * from './Footer';
 export * from './CustomedNav';
-export * from './CustomedFooter'
+export * from './CustomedFooter';
+export * from './Layout';

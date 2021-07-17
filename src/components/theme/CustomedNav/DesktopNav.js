@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react"
+import React/* , { useEffect, useRef, useState } */ from "react"
 import { Link } from "gatsby"
 
 
@@ -7,7 +7,7 @@ import AnchorLink from 'react-anchor-link-smooth-scroll';
 import { StyledMobileLogo, LogoBox, StyledHeader } from "./styles"
 import Toggler from './Toggler';
 
-import { supportsPassiveEvents } from 'detect-it';
+/* import { supportsPassiveEvents } from 'detect-it'; */
 
 const DesktopNavMenu = ({ links }) => {
   /*   const [background, setBackground] = useState(false)

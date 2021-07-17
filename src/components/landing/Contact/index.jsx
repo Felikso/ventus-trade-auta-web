@@ -1,7 +1,6 @@
 import React from 'react';
-import { PropCard, SectionTitle, DefaultWrapper, MainWrapper } from 'components/common';
+import { PropCard, SectionTitle, MainWrapper } from 'components/common';
 import { Wrapper, ContactIconsBox, ToggleableBg, GridContactInfo, ContactSectionsBox, ContactSectionWrapper, ReverseWrapper } from './styles';
-/* import ContactForm from './ContactForm'; */
 
 import { contactItems } from "constans"
 
