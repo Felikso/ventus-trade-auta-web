@@ -27,17 +27,21 @@ module.exports = {
 			},
 		},
 		{
-			resolve: `gatsby-plugin-yandex-metrica`,
+			resolve: `gatsby-plugin-yandex-metrika`,
 			options: {
-				trackingId: process.env.YANDEX_METRICA_TRACKING_IDL,
-				clickmap: true,
-				trackLinks: true,
-				accurateTrackBounce: true,
-				trackHash: true,
-
-				// Detailed recordings of user activity on the site: mouse movement, scrolling, and clicks.
+				// The ID of yandex metrika.
+				trackingId: 12345,
+				// Enabled a webvisor. The default value is `false`.
 				webvisor: true,
-			}
+				// Enables tracking a hash in URL. The default value is `false`.
+				trackHash: true,
+				// Defines where to place the tracking script - `false` means before body (slower loading, more hits)
+				// and `true` means after the body (faster loading, less hits). The default value is `false`.
+				afterBody: true,
+				// Use `defer` attribute of metrika script. If set to `false` - script will be loaded with `async` attribute.
+				// Async enables earlier loading of the metrika but it can negatively affect page loading speed. The default value is `false`.
+				defer: false,
+			},
 		},
 		/* {
 			resolve: `gatsby-plugin-sitemap`,
