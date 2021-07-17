@@ -74,26 +74,7 @@ export const Seo = ({
 			<script type="application/ld+json">{structuredDataOrganization}</script>
 			<link rel="publisher" href={socialLinks.google} />
 			<title>{title}</title>
-			<html lang="en" dir="ltr" />
-			{<><script type="text/javascript"
-				dangerouslySetInnerHTML={{
-					__html: `
-	setTimeout(function(){
-		(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-		m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.defer=1,k.src=r,a.parentNode.insertBefore(k,a)})
-		(window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
-	  
-		ym(83027727, "init", {
-			defer: true,
-			clickmap:true,
-			trackLinks:true,
-			accurateTrackBounce:true,
-			webvisor:true,
-			trackHash:true
-		});
-   }, 5000);
-    `,
-				}} /><noscript><div><img src="https://mc.yandex.ru/watch/64917802" style="position:absolute; left:-9999px;" alt="" /></div></noscript></>}
+			<html lang="pl" dir="ltr" />
 
 		</Helmet>
 	);
